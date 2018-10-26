@@ -1,0 +1,156 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	
+	font-size: 14px;
+	 font-family: 'Open Sans', Helvetica, arial, sans-serif;
+	background-color: #f9fafc;
+	
+}
+
+.heading{
+	
+	text-transform: uppercase;
+	color:#212121;
+}
+
+
+h1{
+	
+	text-align: center;
+	font-size: 2.5em;
+}
+
+.container{
+	width:auto;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+	margin:auto;
+	height:96px;
+	
+	
+}
+
+p{
+	
+	height:30px;
+}
+
+.wrapper2{
+	
+	width:60%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	margin:auto;
+	height:96px;
+	
+}
+
+.space{
+	
+	clear: both;
+
+}
+
+.containerSmall{
+	
+	width: 500px;
+	
+}
+
+.container.buttons {
+	
+	width:800px;
+	justify-content: space-between;
+	
+}
+
+input{
+
+	background-color: #fa7e29;
+	border:0px;
+	color:azure;
+	height:40px;
+	width:110px;
+	border-radius: 10px;
+	font-weight: 300;
+	font-size: 12px;
+	letter-spacing: 0.07em;
+	text-transform: uppercase;
+	
+}
+
+input:hover{
+	
+	box-shadow: 5px 5px 12px grey;
+}
+
+img{
+	height:95px;
+	width:100px;
+	
+}
+
+#btnLeft{
+	background-color: transparent;
+	background-image: url('images/arrowleft.png');
+	background-repeat: no-repeat;
+	height:60px;
+	width: 60px;
+	
+	
+}
+
+#btnLeft:hover{
+	box-shadow: 0 0 0 transparent;
+	background-image: url('images/arrowleft4.png');
+	
+}
+
+#btnRight:hover{
+	box-shadow: 0 0 0 transparent;
+	background-image: url('images/arrowright2.png');
+}
+
+#btnRight{
+	
+	background-color: transparent;
+	background-image: url('images/arrowright.png');
+	background-repeat: no-repeat;
+	
+	height:60px;
+	width: 60px;
+}
+
+.container.gallery {
+	width:auto;
+	justify-content:space-between;
+	align-items: center;
+	height:95px;
+}
+
+.wrapper{
+	align-items: center;
+	height:30%;
+	
+}
+.wrappedElements{
+	
+	border:1px solid #7b7878;
+	background-color:azure;
+	box-shadow: 5px 5px 19px grey;
+	border-radius:15px;
+	margin-left: 12px;
+    margin-right: 18px;
+}
+
+ul{
+	color:firebrick;
+	margin-top:80px;
+	list-style: circle;
+}
+

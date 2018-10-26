@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Index.html</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="js/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+<div class="container">
+<h1 class="heading">JQuery Features</h1>
+</div>
+<div class="space"></div>
+<div class="container buttons">
+<input type="button" name="show" value="Show" id="show" />
+<input type="button" name="hide" value="Hide" id="hide" />
+<input type="button" name="showEven" value="Show Even" id="showEven" />
+<input type="button" name="showOdd" value="Show Odd" id="showOdd"/>
+<input type="button" name="shiftRight" value="Shift Right" id="shiftRight"/>
+<input type="button" name="shiftLeft" value="Shift Left" id="shiftLeft"/>
+<input type="button" value="reset" id="reset"/>
+	<div class="space"></div>
+</div>
+	<p></p>
+	<div class="wrapper2" >
+		<input type="button" id="btnLeft" value=" ">
+		<div class="space"></div>
+	<div id="gallery">	
+	<img src="images/1.png" alt="Image1">
+	<img src="images/2.png" alt="Image2">
+	<img src="images/3.png" alt="Image3">
+	<img src="images/4.png" alt="Image4">
+	<img src="images/5.png" alt="Image5">
+		
+	</div>
+		<input type="button" id="btnRight" value=" ">
+		
+	</div>
+<div class="space"></div>
+	<div class="wrapper">
+		<p><br><br></p>
+		<ul>
+			<li><strong>SHOW BUTTON:</strong> show all images</li>
+			<li><strong>HIDE BUTTON:</strong> hide all images</li>
+			<li><strong>SHOW EVEN:</strong> show images at even position</li>
+			<li><strong>SHOW ODD:</strong> show images at odd positions</li>
+			<li><strong>RESET BUTTON:</strong> reset image positions and load again</li>
+			<li><strong>RIGHT ARROW IMAGE BUTTON:</strong> performs image right shift</li>
+			<li><strong>LEFT ARROW IMAGE BUTTON:</strong> performs image left shift</li>
+		</ul>
+		
+	</div>
+
+<script >
+	
+//Assign style to images
+	$(function() {
+	$("#gallery").addClass("container gallery");
+	$("img").addClass("wrappedElements");	
+	
+	})
+	
+	
+//Show Images 
+$("#show").click(function() {
+	"use strict";
+    $("img").show();
+	   
+    });
+
+//Hide Images
+$("#hide").click(function() {
+	
+    $("img").hide();
+	   
+    });
+	
+
+// Show Even
+$("#showEven").click(function() {
+	
+	//$("img").hide();
+    $("img:even").show("slow").fadeIn();
+	$("img:odd").hide("slow").fadeOut();   
+    });
+	
+	
+//Show Odd
+	
+$("#showOdd").click(function() {
+    $("img:odd").show("slow").fadeIn();
+	$("img:even").hide("slow").fadeOut();
+	   
+    });
+	
+
+//Shift Right
+	
+$("#shiftRight, #btnRight").click(function() {
+    
+	 $( "img:last" ).insertBefore( $( "img:first" ) );
+    });
+	
+	
+//Shift Left
+	
+$("#shiftLeft, #btnLeft").click(function() {
+    
+	 $( "img:first" ).insertAfter( $( "img:last" ) );
+    });
+	
+	
+$( "#reset" ).click(function() {
+    location.reload();
+});
+	
+	</script>
+
+</body>
+</html>
